@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 
-module.exports = {
+const nextConfig = {
   reactStrictMode: true,
+
+  experimental: {
+    webpackBuildWorker: true
+  },
+
   webpack: (config, options) => {
     config.module.rules.push({
       test: /\.pdf$/i,
@@ -10,10 +15,19 @@ module.exports = {
 
     return config;
   },
+
   env: {
     BASE_URL: process.env.BASE_URL,
   },
+
   images: {
-    domains: ["img.shields.io", "pohwp.dev", "www.pohwp.dev"],
-  },
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "img.shields.io",
+      }
+    ]
+  }
 };
+
+module.exports = nextConfig;

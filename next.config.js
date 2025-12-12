@@ -3,9 +3,7 @@
 const nextConfig = {
   reactStrictMode: true,
 
-  experimental: {
-    webpackBuildWorker: true
-  },
+  turbopack: {},
 
   webpack: (config, options) => {
     config.module.rules.push({

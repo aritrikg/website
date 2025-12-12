@@ -75,6 +75,7 @@ import col3 from "../../assets/gallery/2.webp";
 import col4 from "../../assets/gallery/3.webp";
 import col5 from "../../assets/gallery/4.webp";
 import col6 from "../../assets/gallery/5.webp";
+
 export const TechIcon = {
   REACT:
     "https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB",
@@ -129,6 +130,8 @@ export const TechIcon = {
     "https://img.shields.io/badge/Supabase-1E2E3B?style=for-the-badge&logo=supabase&logoColor=white",
   CHATGPT:
     "https://img.shields.io/badge/chatGPT-74aa9c?logo=openai&logoColor=white",
+  SPRINGBOOT:
+    "https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white",
 };
 
 export const AppDirectory: Map<number, Tab> = new Map([
@@ -178,12 +181,12 @@ export const AppDirectory: Map<number, Tab> = new Map([
     4,
     {
       id: 0,
-      title: "My Photography Collection",
+      title: "My Education",
       message: "",
-      Icon: gallery,
+      Icon: file,
       isMinimized: false,
       zIndex: 0,
-      program: App.MYGALLERY,
+      program: App.MYDOCUMENT,
       prompt: false,
       backBtnActive: false,
     },
@@ -568,54 +571,17 @@ export const WorkAccordionContent = [
   },
 ] as WorkFile[];
 
-// For My Photography Collection
-export const PhotoCollection = [
-  {
-    id: 0,
-    title: "Rocky afternoon",
-    location: "Dingboche-Lobuche, Nepal",
-    desc: "Taken enroute to Everest Base Camp",
-    date: "31 December 2022",
-    img: col1,
-  },
+// For Education
+export const EducationData = [
   {
     id: 1,
-    title: "Himalayan Mountain",
-    location: "Lobuche-GorakShep, Nepal",
-    desc: "Icy morning",
-    date: "1 January 2023",
-    img: col2,
+    school: "National University of Singapore",
+    degree: "Bachelor of Engineering (Honors)",
+    specialization: "Engineering Science",
+    date: "Aug 2021 - May 2024",
+    cgpa: "4.0",
+    overview: `Graduated with honors from the National University of Singapore with a specialization in Engineering Science. 
+    Completed diverse coursework spanning software engineering, digital systems design, robotics, and embedded systems. 
+    Actively participated in hackathons and personal projects throughout the degree program.`,
   },
-  {
-    id: 2,
-    title: "Autumn Foliage",
-    location: "Kyoto, Japan",
-    desc: "Japanese Autumn Foliage in the Imperial Palace of Kyoto",
-    date: "23 November 2023",
-    img: col3,
-  },
-  {
-    id: 3,
-    title: "Japanese Symmetry",
-    location: "Kiyomizu Temple, Kyoto",
-    desc: "One of the most famous temples in Kyoto, Japan",
-    date: "22 November 2023",
-    img: col4,
-  },
-  {
-    id: 4,
-    title: "Australia Forest Trail",
-    location: "Aqueduct Road, Melbourne, Australia",
-    desc: "Bird eye view of the forest trail during winter",
-    date: "June 2022",
-    img: col5,
-  },
-  {
-    id: 5,
-    title: "Milky Wave",
-    location: "Waiao Beach, Yilan, Taiwan",
-    desc: "Surfing in the middle of a milky ocean",
-    date: "17 November 2022",
-    img: col6,
-  },
-] as GalleryImage[];
+];
